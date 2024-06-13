@@ -1,0 +1,6 @@
+com/GG/Notate/service/NoteService.class
+com/GG/Notate/controller/NoteController.class
+com/GG/Notate/NotateApplication.class
+com/GG/Notate/config/SecurityConfig.class
+com/GG/Notate/model/Note.class
+com/GG/Notate/repository/NoteRepository.class

@@ -1,0 +1,6 @@
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/NotateApplication.java
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/config/SecurityConfig.java
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/controller/NoteController.java
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/model/Note.java
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/repository/NoteRepository.java
+/Users/gowthamg/Desktop/GitHub Projects/notate/server/src/main/java/com/GG/Notate/service/NoteService.java

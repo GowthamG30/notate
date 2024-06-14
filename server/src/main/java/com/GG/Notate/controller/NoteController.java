@@ -32,32 +32,9 @@ public class NoteController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<Note> updateNote(@PathVariable String id, @RequestBody Note updatedNote) {
-        Note existingNote = noteService.getNoteById(id);
-        if(existingNote != null) {
-            updatedNote.setId(id);
-            updatedNote.setNoteStatus(existingNote.getNoteStatus());
-            Note savedNote = noteService.updateNoteById(updatedNote);
-            return new ResponseEntity<>(savedNote, HttpStatus.OK);
-        }
-        else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @PutMapping("/updateStatus/{id}")
-    public ResponseEntity<Note> updateNoteStatus(@PathVariable String id, @RequestBody Note updatedNote) {
-        Note existingNote = noteService.getNoteById(id);
-        if(existingNote != null) {
-            updatedNote.setId(id);
-            updatedNote.setTitle(existingNote.getTitle());
-            updatedNote.setContent(existingNote.getContent());
-            Note savedNote = noteService.updateNoteById(updatedNote);
-            return new ResponseEntity<>(savedNote, HttpStatus.OK);
-        }
-        else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+    public ResponseEntity<Note> updateNote(@PathVariable String id, @RequestBody Note note) {
+        Note updatedNote = noteService.updateNoteById(id, note);
+        return new ResponseEntity<>(updatedNote, HttpStatus.OK);
     }
 
     @DeleteMapping("/del/{id}")

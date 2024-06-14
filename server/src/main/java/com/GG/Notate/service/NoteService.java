@@ -28,8 +28,12 @@ public class NoteService {
         return noteRepository.findById(id).orElseThrow(() -> new RuntimeException("Note not found"));
     }
 
-    public Note updateNoteById(Note updatedNote) {
-        return noteRepository.save(updatedNote);
+    public Note updateNoteById(String id, Note newNote) {
+        Note note = getNoteById(id);
+        if(newNote.getTitle() != null) note.setTitle(newNote.getTitle());
+        if(newNote.getContent() != null) note.setContent(newNote.getContent());
+        if(newNote.getNoteStatus() != null) note.setNoteStatus(newNote.getNoteStatus());
+        return noteRepository.save(note);
     }
 
     public void deleteNoteById(String id) {
